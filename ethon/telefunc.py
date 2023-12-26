@@ -120,7 +120,7 @@ async def force_sub(client, channel, id, ft):
         x = await client(GetParticipantRequest(channel=channel, participant=int(id)))
         left = x.stringify()
         if 'left' in left:
-            s, r = True, f"{ft}\n\nAlso join @DroneBots"
+            s, r = True, f"{ft}\n\n"
         else:
             s, r = False, None
     except UserNotParticipantError:
